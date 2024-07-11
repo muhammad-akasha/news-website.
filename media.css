@@ -1,0 +1,40 @@
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -54%; /* Initially hidden off the screen */
+    width: 54%; /* Specific width */
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 30px 0px;
+    transition: left 0.3s ease; /* Only transition the left property */
+    z-index: 99999;
+    background: rgb(34 39 46);
+    color: #fff;
+  }
+
+  .navbar-collapse.show {
+    left: 0; /* Move to the left to be fully visible */
+  }
+
+  .navbar-nav {
+    padding: 100px 0px !important;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-brand {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+  .navbar-collapse {
+    width: 300px;
+    left: -300px;
+  }
+}
