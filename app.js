@@ -40,7 +40,7 @@ async function displayNewsOnload() {
   try {
     const res = await fetch(
       `https://newsapi.org/v2/everything?q=top&from=${year}-${month}-${adjustedDate}&apiKey=${apiKey}`
-      );
+    );
     const data = await res.json();
     console.log(data);
     newsContainer.innerHTML = "";
@@ -120,7 +120,7 @@ async function searchByCategory(ele) {
       newsContainer.innerHTML = `<h1 style=text-align:center ; text-transform:capitalize> ${ele.innerText} </h1>`;
       if (title && description && img) {
         let newDiv = `
-        <div class="news-div">
+        <div>
         <h6 style="text-align:center"> Published date <strong class="publish-date"> ${publishedDate}  </strong> <h6>
        <img src="${img === null ? "image not available" : img}" alt"${title}">
        <h2>  Title  :  <br /><strong> ${title} </strong> </h2>

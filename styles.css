@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 body {
-  background: #504e5094;
+  background: #f7f7f794;
 }
 .none {
   display: none !important;
@@ -83,13 +83,8 @@ body {
   font-size: 16px;
   text-transform: uppercase;
 }
-.news-div {
-  box-shadow: -6px -4px 24px hsl(220deg 17% 27% / 20%),
-    2px 4px 4px hsl(220deg 14% 14% / 20%), 4px 8px 8px hsl(220deg 60% 50% / 20%),
-    8px 16px 16px hsl(220deg 14% 8% / 20%), 16px 32px 32px hsl(0deg 0% 0% / 20%);
-  margin-top: 30px;
-  background: #000;
-  color: #fff;
+.line div {
+  margin: 8px 0px 0px 8px;
 }
 .news-container img {
   width: 100%;
@@ -100,11 +95,18 @@ body {
   padding: 20px;
   border: 2px solid #000;
   border-radius: 25px;
+  box-shadow: -6px -4px 24px hsl(220deg 17% 27% / 20%),
+    2px 4px 4px hsl(220deg 14% 14% / 20%), 4px 8px 8px hsl(220deg 60% 50% / 20%),
+    8px 16px 16px hsl(220deg 14% 8% / 20%), 16px 32px 32px hsl(0deg 0% 0% / 20%);
+  margin-top: 30px;
+  background: #000;
+  color: #fff;
 }
 .news-container h2 {
-  font-weight: 600;
+  font-weight: 500;
   padding-top: 20px;
   font-size: 20px;
+  overflow: hidden;
 }
 
 .news-container strong {
