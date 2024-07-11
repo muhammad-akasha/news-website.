@@ -34,11 +34,12 @@ let adjustedDate = date.getDate();
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
 
-window.addEventListener("load", displayNewsOnload);
+window.addEventListener("load", displayNewsOnload());
+
 async function displayNewsOnload() {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/everything?q=top&sortBy=popularity&from=${year}-${month}-${adjustedDate}&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=top&from=${year}-${month}-${adjustedDate}&apiKey=${apiKey}`
       );
     const data = await res.json();
     console.log(data);
