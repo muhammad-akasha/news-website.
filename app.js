@@ -110,14 +110,14 @@ async function searchByCategory(ele) {
     );
     const data = await res.json();
     console.log(data);
-    newsContainer.innerHTML = "";
+    let div = document.querySelector(".heading");
+    div.innerHTML = `<h1 style="text-align: center;margin-top: 50px;"> ${ele.innerText}  </h1>`;
+    newsContainer.innerHTML = ``;
     for (let news of data.articles) {
       let publishedDate = news.publishedAt.slice(0, 10);
-
       let title = news.title;
       let description = news.description;
       let img = news.urlToImage;
-      newsContainer.innerHTML = `<h1 style=text-align:center ; text-transform:capitalize> ${ele.innerText} </h1>`;
       if (title && description && img) {
         let newDiv = `
         <div>
