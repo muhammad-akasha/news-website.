@@ -34,7 +34,7 @@ let adjustedDate = date.getDate();
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
 
-window.addEventListener("load", displayNewsOnload());
+window.addEventListener("load", displayNewsOnload);
 
 async function displayNewsOnload() {
   try {
